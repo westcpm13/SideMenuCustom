@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2EBFBA1F2B6B090083DEBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EBFB91F2B6B090083DEBC /* MainViewController.swift */; };
 		FDA2752E1F2B4D72008E5ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA2752D1F2B4D72008E5ADD /* AppDelegate.swift */; };
 		FDA275301F2B4D72008E5ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA2752F1F2B4D72008E5ADD /* ViewController.swift */; };
 		FDA275331F2B4D72008E5ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA275311F2B4D72008E5ADD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD2EBFB91F2B6B090083DEBC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FDA2752A1F2B4D72008E5ADD /* SideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA2752D1F2B4D72008E5ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA2752F1F2B4D72008E5ADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				FDA275341F2B4D72008E5ADD /* Assets.xcassets */,
 				FDA275361F2B4D72008E5ADD /* LaunchScreen.storyboard */,
 				FDA275391F2B4D72008E5ADD /* Info.plist */,
+				FD2EBFB91F2B6B090083DEBC /* MainViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2EBFBA1F2B6B090083DEBC /* MainViewController.swift in Sources */,
 				FDA275301F2B4D72008E5ADD /* ViewController.swift in Sources */,
 				FDA2752E1F2B4D72008E5ADD /* AppDelegate.swift in Sources */,
 			);
@@ -285,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -329,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -412,6 +416,7 @@
 				FDA275491F2B4D72008E5ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDA2754A1F2B4D72008E5ADD /* Build configuration list for PBXNativeTarget "SideMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				FDA2754C1F2B4D72008E5ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
