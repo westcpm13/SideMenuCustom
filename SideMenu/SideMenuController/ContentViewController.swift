@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
-    @IBAction func menuClicked(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "toggleMenu"), object: nil)
-
+class ContentViewController: UIViewController {
+    
+    @IBAction func menuButtonClicked(_ sender: UIButton) {
+     NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.NotificationMenuKey), object: nil)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

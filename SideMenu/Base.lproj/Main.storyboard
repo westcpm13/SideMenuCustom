@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Master View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MasterViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-UC-Osb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-UC-Osb">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7I-mi-PZQ" userLabel="left Container View">
@@ -30,13 +30,13 @@
                                             <constraint firstAttribute="width" constant="108" id="u9A-zj-GNA"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="Qdq-VD-mPv" kind="embed" id="pJ5-pl-hNY"/>
+                                            <segue destination="Qdq-VD-mPv" kind="embed" id="qPk-FO-Lma"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-BD-kaW" userLabel="right Container View">
                                         <rect key="frame" x="108" y="0.0" width="375" height="667"/>
                                         <connections>
-                                            <segue destination="9od-vS-pGd" kind="embed" id="ifS-51-zma"/>
+                                            <segue destination="9od-vS-pGd" kind="embed" id="pit-d9-n40"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="-309" y="875"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="SA4-dy-GxT">
             <objects>
-                <viewController id="9od-vS-pGd" customClass="MainViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9od-vS-pGd" customClass="ContentViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xds-Zl-8bo"/>
                         <viewControllerLayoutGuide type="bottom" id="tFc-Uw-DuJ"/>
@@ -103,21 +103,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6s-vQ-hRh">
-                                <rect key="frame" x="53" y="42" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6s-vQ-hRh">
+                                <rect key="frame" x="20" y="20" width="39" height="30"/>
+                                <state key="normal" title="Menu"/>
                                 <connections>
-                                    <action selector="menuClicked:" destination="9od-vS-pGd" eventType="touchUpInside" id="SbR-GY-cKW"/>
+                                    <action selector="menuButtonClicked:" destination="9od-vS-pGd" eventType="touchUpInside" id="ecm-Yp-ypG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.23921568630000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q6s-vQ-hRh" firstAttribute="top" secondItem="Xds-Zl-8bo" secondAttribute="bottom" constant="20" id="9ow-oR-7Ge"/>
+                            <constraint firstItem="q6s-vQ-hRh" firstAttribute="leading" secondItem="EvR-5M-Hct" secondAttribute="leading" constant="20" id="Sns-Qk-skB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLx-oL-ecu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="875"/>
+            <point key="canvasLocation" x="204" y="875"/>
         </scene>
     </scenes>
 </document>

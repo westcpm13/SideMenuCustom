@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MasterViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    let leftMenuWidth: CGFloat = 108
-
+    private let leftMenuWidth: CGFloat = 108
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         DispatchQueue.main.async {
             self.closeMenu(false)
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.toggleMenu), name: NSNotification.Name(rawValue: "toggleMenu"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MasterViewController.toggleMenu), name: NSNotification.Name(rawValue: Constants.NotificationMenuKey), object: nil)
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(Constants.NotificationMenuKey), object: nil)
     }
     
     func toggleMenu(){
@@ -27,17 +31,16 @@ class ViewController: UIViewController {
     }
 
     private func closeMenu(_ animated: Bool = true) {
-        scrollView.setContentOffset(CGPoint(x: leftMenuWidth, y: 0), animated: animated)
+        scrollView.setContentOffset(CGPoint(x: self.leftMenuWidth, y: 0), animated: animated)
     }
     
     private func openMenu() {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 
-    
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension MasterViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
