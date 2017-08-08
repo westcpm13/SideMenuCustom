@@ -12,6 +12,7 @@ class MasterViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     private let leftMenuWidth: CGFloat = 108
+    var notifictionCenter = NotificationCenter.default
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +21,13 @@ class MasterViewController: UIViewController {
             self.closeMenu(false)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(MasterViewController.toggleMenu), name: NSNotification.Name(rawValue: Constants.NotificationMenuKey), object: nil)
+        notifictionCenter.addObserver(self, selector: #selector(MasterViewController.toggleMenu), name: NSNotification.Name(rawValue: Constants.NotificationMenuKey), object: nil)
     }
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(Constants.NotificationMenuKey), object: nil)
+        notifictionCenter.removeObserver(self, name: NSNotification.Name(Constants.NotificationMenuKey), object: nil)
     }
     
-    func toggleMenu(){
+    func toggleMenu() {
         scrollView.contentOffset.x == 0  ? closeMenu() : openMenu()
     }
 

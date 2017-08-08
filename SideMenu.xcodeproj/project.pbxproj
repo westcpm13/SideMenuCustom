@@ -10,6 +10,7 @@
 		CAB85E861F3A3AC200D3530C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E831F3A3AC200D3530C /* Constants.swift */; };
 		CAB85E871F3A3AC200D3530C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E841F3A3AC200D3530C /* ContentViewController.swift */; };
 		CAB85E881F3A3AC200D3530C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E851F3A3AC200D3530C /* MasterViewController.swift */; };
+		CAB85E8A1F3A451E00D3530C /* MasterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB85E891F3A451E00D3530C /* MasterViewControllerTests.swift */; };
 		FDA2752E1F2B4D72008E5ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA2752D1F2B4D72008E5ADD /* AppDelegate.swift */; };
 		FDA275331F2B4D72008E5ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA275311F2B4D72008E5ADD /* Main.storyboard */; };
 		FDA275351F2B4D72008E5ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA275341F2B4D72008E5ADD /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		CAB85E831F3A3AC200D3530C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CAB85E841F3A3AC200D3530C /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		CAB85E851F3A3AC200D3530C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CAB85E891F3A451E00D3530C /* MasterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTests.swift; sourceTree = "<group>"; };
 		FDA2752A1F2B4D72008E5ADD /* SideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA2752D1F2B4D72008E5ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA275321F2B4D72008E5ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				FDA275421F2B4D72008E5ADD /* SideMenuTests.swift */,
 				FDA275441F2B4D72008E5ADD /* Info.plist */,
+				CAB85E891F3A451E00D3530C /* MasterViewControllerTests.swift */,
 			);
 			path = SideMenuTests;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB85E8A1F3A451E00D3530C /* MasterViewControllerTests.swift in Sources */,
 				FDA275431F2B4D72008E5ADD /* SideMenuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
